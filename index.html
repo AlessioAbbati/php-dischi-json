@@ -14,8 +14,10 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="d-flex align-items-center">
+        <div class="logo d-flex justify-content-start align-items-center">
+            <img class="small_logo" src="img/logo-small.svg" alt="">
+        </div>
     </header>
     <div class="d-flex justify-content-around flex-wrap" id="app">
         <div class="album d-flex flex-column align-items-center" v-for="card in cards" :key="card.name">
