@@ -36,6 +36,10 @@ header{
     cursor: pointer;
 }
 
+.scale:hover {
+    transform: scale(1.1);
+}
+
 img {
     width: 210px;
     height: 210px;
