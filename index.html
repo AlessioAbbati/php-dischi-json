@@ -25,10 +25,13 @@
             <h4 class="text-white text-center">{{ card.name }}</h4>
             <small class="text-white">{{ card.artist }}</small>
             <div class="date text-white">{{ card.date }}</div>
-            <div class="modal fade" :id="'exampleModal' + index" tabindex="-1" :aria-labelledby="'exampleModalLabel' + index" aria-hidden="true">
-                <div class="modal-dialog">
+            <div class="modal fade modal-fullscreen" :id="'exampleModal' + index" tabindex="-1" :aria-labelledby="'exampleModalLabel' + index" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
-                        <div class="modal-body d-flex flex-column align-items-center">
+                        <div class="mod modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="mod modal-body d-flex flex-column justify-content-center align-items-center">
                             <img :src="card.photo">
                             <h4 class="text-center">{{ card.name }}</h4>
                             <small class="">{{ card.artist }}</small>
@@ -37,6 +40,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
