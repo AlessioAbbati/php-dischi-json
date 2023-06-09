@@ -32,6 +32,10 @@ header{
     border-radius: .5rem;
 }
 
+.album:hover {
+    cursor: pointer;
+}
+
 img {
     width: 210px;
     height: 210px;
