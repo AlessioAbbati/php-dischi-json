@@ -20,11 +20,23 @@
         </div>
     </header>
     <div class="d-flex justify-content-around flex-wrap" id="app">
-        <div class="album d-flex flex-column align-items-center" v-for="card in cards" :key="card.name">
-            <img :src="card.photo" alt="">
+        <div class="album d-flex flex-column align-items-center" v-for="(card, index) in cards" :key="card.name">
+            <img data-bs-toggle="modal" :data-bs-target="'#exampleModal' + index" :src="card.photo" alt="">
             <h4 class="text-white text-center">{{ card.name }}</h4>
             <small class="text-white">{{ card.artist }}</small>
             <div class="date text-white">{{ card.date }}</div>
+            <div class="modal fade" :id="'exampleModal' + index" tabindex="-1" :aria-labelledby="'exampleModalLabel' + index" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body d-flex flex-column align-items-center">
+                            <img :src="card.photo">
+                            <h4 class="text-center">{{ card.name }}</h4>
+                            <small class="">{{ card.artist }}</small>
+                            <div class="date">{{ card.date }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
